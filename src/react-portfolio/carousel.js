@@ -33,21 +33,21 @@ export default class ControlledCarousel extends React.Component {
                 onSelect={this.handleSelect}
             >
                 <Carousel.Item>
-                    <img width={900} height={500} alt="900x500" src={Carousel01} />
+                    <img width={"100%"} height={400} alt="" src={Carousel01} />
                     <Carousel.Caption>
                         <h3>Project Yuri</h3>
                         <p>Talking robot who throw the interesting question for you.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <img width={900} height={500} alt="900x500" src={Carousel02} />
+                    <img width={"100%"} height={400} alt="" src={Carousel02} />
                     <Carousel.Caption>
                         <h3>Electronic Catalog System</h3>
                         <p>Created a high fidelity prototype catalog system for the UW Bothell IT depertment</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <img width={900} height={500} alt="900x500" src={Carousel03} />
+                    <img width={"100%"} height={400} alt="" src={Carousel03} />
                     <Carousel.Caption>
                         <h3>University of Washington</h3>
                         <p>
