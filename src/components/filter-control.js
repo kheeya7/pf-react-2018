@@ -1,10 +1,10 @@
 import React from 'react'
 
-export default class PageContentsView extends React.Component {
+export default class FilterControl extends React.Component {
     render() {
         return (
             <div>
-                Portfolio Contents
+                Filter Control
             </div>
         )
     }

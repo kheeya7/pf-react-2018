@@ -1,6 +1,5 @@
 import React from 'react'
 import { Nav, Navbar, NavItem } from 'react-bootstrap'
-import ControlledCarousel from './carousel.js'
 
 export default class HeaderView extends React.Component {
     render() {
@@ -18,7 +17,6 @@ export default class HeaderView extends React.Component {
                         </NavItem>
                     </Nav>
                 </Navbar>
-                <ControlledCarousel />
             </div>
         )
     }

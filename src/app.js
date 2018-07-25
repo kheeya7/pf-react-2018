@@ -1,53 +1,47 @@
 import React from 'react'
 import JakeTheDog from '../assets/jake.png'
-import ReactPortfolio from './react-portfolio'
+import HeaderView from './header'
+import FooterView from './footer'
+import MainView from './main'
+import PostingDetail from './posting-detail'
 
 class App extends React.Component {
   constructor(props) {
     super(props)
 
     this.state = {
-      isJakeVisible: false
+      selectedProjectId: null
     }
 
-    this.showJake = this.showJake.bind(this)
-    this.hideJake = this.hideJake.bind(this)
+    this.selectProjectById = this.selectProjectById.bind(this)
   }
 
-  showJake() {
+  selectProjectById(projectId) {
     this.setState({
-      isJakeVisible: true
-    })
-  }
-
-  hideJake() {
-    this.setState({
-      isJakeVisible: false
+      selectedProjectId: projectId
     })
   }
 
   render() {
-    const showJakeComponent = () => {
-      if (this.state.isJakeVisible) {
-        return (
-          <img src={JakeTheDog} onClick={this.hideJake}></img>
-        )
-      } else {
-        return (
-          <button onClick={this.showJake}>Show Jake</button>
-        )
-      }
+    if (this.state.selectedProjectId) {
+      return (
+        <div>
+          <HeaderView />
+          <PostingDetail
+            selectedProjectId={this.state.selectedProjectId}
+            selectProjectById={this.selectProjectById} />
+          <FooterView />
+        </div>
+      )
+    } else {
+      return (
+        <div>
+          <HeaderView />
+          <MainView selectProjectById={this.selectProjectById} />
+          <FooterView />
+        </div>
+      )
     }
-
-    return (
-      <div>
-        {/* <h1 className="tomato-color">
-          {this.props.title}
-        </h1> */}
-        {/* {showJakeComponent()} */}
-        <ReactPortfolio />
-      </div>
-    )
   }
 }
 
