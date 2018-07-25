@@ -1,5 +1,6 @@
 import React from 'react'
 import JakeTheDog from '../assets/jake.png'
+import ReactPortfolio from './react-portfolio'
 
 class App extends React.Component {
   constructor(props) {
@@ -40,10 +41,11 @@ class App extends React.Component {
 
     return (
       <div>
-        <h1 className="tomato-color">
+        {/* <h1 className="tomato-color">
           {this.props.title}
-        </h1>
-        {showJakeComponent()}
+        </h1> */}
+        {/* {showJakeComponent()} */}
+        <ReactPortfolio />
       </div>
     )
   }
