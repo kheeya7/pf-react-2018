@@ -1,0 +1,45 @@
+[
+    {
+        "id": "project1",
+        "tags": [
+            "User Experience",
+            "iOS",
+            "Prototyping",
+            "Social Justice",
+            "Graphic Design",
+            "UX Research",
+            "Emphathy"
+        ],
+        "title": "UX Researcher",
+        "subtitle": "Intership at the University of Washington",
+        "description": "Internship as a research assistant helped me develop my research ability for real world problems.",
+        "imageUrl": "http://katesohng.com/assets/img/work-01.jpg"
+    },
+    {
+        "id": "project2",
+        "tags": [
+            "Photoshop",
+            "HTML",
+            "CSS",
+            "JavaSctipt",
+            "Graphic Design",
+            "Web Design"
+        ],
+        "title": "Web Designer",
+        "subtitle": "Web Design & Develope at KoreaDepart",
+        "description": "My career in the tech filed started as a web/graphic designer for a web development department. For two years, I developed HTML and CSS skills and found my interests in web programming.",
+        "imageUrl": "http://katesohng.com/assets/img/work-02.jpg"
+    },
+    {
+        "id": "project3",
+        "tags": [
+            "Photoshop",
+            "Graphic Design",
+            "Illustrator"
+        ],
+        "title": "Graphic Designer",
+        "subtitle": "Graphic Designer at HunyaisDdokddokE.com",
+        "description": "My life with graphic design started at a small institution in Busan. This experience reconnected me with my dream again.",
+        "imageUrl": "http://katesohng.com/assets/img/work-03.jpg"
+    }
+]

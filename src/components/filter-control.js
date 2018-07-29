@@ -6,6 +6,7 @@ import {
     ButtonToolbar
 } from 'react-bootstrap'
 import allPossibleTags from '../shared/all-possible-tags'
+import ProjectPreview from './project-preview'
 
 export default class FilterControl extends React.Component {
     constructor(props) {
@@ -84,7 +85,7 @@ export default class FilterControl extends React.Component {
                                 }
                             </ToggleButtonGroup>
                         </ButtonToolbar>
-                        <p> Some text in the modal...</p>
+                        <p>Choose skill tag(s) you want to see.</p>
                     </div>
                 </div>
             </div>
