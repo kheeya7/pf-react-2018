@@ -10,7 +10,8 @@ export default class MainView extends React.Component {
 
         this.state = {
             isFilterOpen: false,
-            selectedTags: allPossibleTags,
+            initialTags: [],
+            selectedTags: [],
         }
 
         this.openFilter = this.openFilter.bind(this)

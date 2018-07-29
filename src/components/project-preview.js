@@ -38,7 +38,7 @@ export default class ProjectPreview extends React.Component {
         const intersection = this.props.projectTags.filter(value => this.props.selectedTags.indexOf(value) !== -1);
         let isVisible = false;
 
-        if (intersection.length > 0) {
+        if (intersection.length > 0 || this.props.selectedTags.length === 0) {
             isVisible = true;
         }
 
