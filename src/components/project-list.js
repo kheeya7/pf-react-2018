@@ -17,6 +17,11 @@ export default class ProjectList extends React.Component {
     render() {
         return (
             <div>
+                <div>
+                    <h3>
+                        {"Selected Tags: " + this.props.selectedTags.join('*')}
+                    </h3>
+                </div>
                 <Button onClick={this.buttonClicked} id='proj1'>Project One</Button>
                 <Button onClick={this.buttonClicked} id='proj2'>Project Two</Button>
                 <Button onClick={this.buttonClicked} id='proj3'>Project Three</Button>

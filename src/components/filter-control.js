@@ -1,10 +1,17 @@
 import React from 'react'
-import { Button } from 'react-bootstrap'
+import {
+    Button,
+    ToggleButtonGroup,
+    ToggleButton,
+    ButtonToolbar
+} from 'react-bootstrap'
+import allPossibleTags from '../shared/all-possible-tags'
 
 export default class FilterControl extends React.Component {
     constructor(props) {
         super(props)
 
+        this.handleChange = this.handleChange.bind(this)
         this.onModalContainerClicked = this.onModalContainerClicked.bind(this)
     }
 
@@ -12,6 +19,10 @@ export default class FilterControl extends React.Component {
         if (e.target.id === 'modal-container') {
             this.props.closeFilter()
         }
+    }
+
+    handleChange(e) {
+        this.props.setSelectedTags(e)
     }
 
     render() {
@@ -39,6 +50,7 @@ export default class FilterControl extends React.Component {
 
         return (
             <div>
+                <p>{"Selected tags: " + this.props.selectedTags.join(' ')}</p>
                 <Button onClick={this.props.openFilter}>
                     Filter Control
                 </Button>
@@ -54,6 +66,24 @@ export default class FilterControl extends React.Component {
                         >
                             &times;
                         </span>
+                        <ButtonToolbar>
+                            <ToggleButtonGroup
+                                type="checkbox"
+                                value={this.props.selectedTags}
+                                onChange={this.handleChange}>
+                                {
+                                    allPossibleTags.map((tag) => {
+                                        return (
+                                            <ToggleButton
+                                                key={tag}
+                                                value={tag}>
+                                                {tag}
+                                            </ToggleButton>
+                                        )
+                                    })
+                                }
+                            </ToggleButtonGroup>
+                        </ButtonToolbar>
                         <p> Some text in the modal...</p>
                     </div>
                 </div>
