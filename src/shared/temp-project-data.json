@@ -1,6 +1,6 @@
 [
     {
-        "id": "project1",
+        "id": "unify",
         "tags": [
             "User Experience",
             "iOS",
@@ -16,7 +16,7 @@
         "imageUrl": "http://katesohng.com/assets/img/work-01.jpg"
     },
     {
-        "id": "project2",
+        "id": "project-yuri",
         "tags": [
             "Photoshop",
             "HTML",
