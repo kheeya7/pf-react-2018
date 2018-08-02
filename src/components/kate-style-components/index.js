@@ -1,5 +1,8 @@
 import Title from './title'
-import SubTitle from './subtitle'
+import ProjectDescription from './project-description'
 import Separator from './separator'
+import SectionTitle from './section-title'
+import Paragraph from './paragraph'
+import SectionSubtitle from './section-subtitle'
 
-export { Title, SubTitle, Separator }
+export { Title, ProjectDescription, Separator, SectionTitle, SectionSubtitle, Paragraph }

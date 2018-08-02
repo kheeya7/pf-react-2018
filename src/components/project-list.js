@@ -37,8 +37,11 @@ export default class ProjectList extends React.Component {
                                         title={projectItem.title}
                                         subtitle={projectItem.subtitle}
                                         imageUrl={projectItem.imageUrl}
-                                        description={projectItem.description}
+                                        ProjectDescription={projectItem.projectDescription}
                                         projectTags={projectItem.tags}
+                                        sectionTitle={projectItem.sectionTitle}
+                                        sectionSubtitle={projectItem.sectionSubtitle}
+                                        paragraph={projectItem.paragraph}
                                         selectedTags={this.props.selectedTags}
                                     />
                                 </div>

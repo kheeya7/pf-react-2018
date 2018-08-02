@@ -4,7 +4,8 @@ export default class Title extends React.Component {
     render() {
         const titleStyle = {
             margin: "12px",
-            fontSize: "25px",
+            fontSize: "58px",
+            textAlign: "center",
         }
 
         return (
