@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Row, Col } from 'react-bootstrap'
+import { Grid, Row, Col, Image } from 'react-bootstrap'
 import {
     Title,
     ProjectDescription,
@@ -7,13 +7,15 @@ import {
     SectionTitle,
     SectionSubtitle,
     Paragraph
-} from '../components/kate-style-components/'
-import ContentCarousel from './content-carousel'
+} from '../../components/kate-style-components/'
+import { UnifyHeaderImage } from '../../components/kate-style-components/'
+import ContentCarousel from '../content-carousel'
 
 export default class Unify extends React.Component {
     render() {
         return (
             <Grid>
+                <UnifyHeaderImage />
                 <Title text="Unify" />
                 <Separator />
                 <ProjectDescription text="Interests-sharing network for everyone" />
@@ -29,16 +31,12 @@ export default class Unify extends React.Component {
                 <SectionSubtitle text="Personas" />
                 <Paragraph text="The archetype of this persona is an educator and she represents a group of people who care to educate people." />
                 <SectionSubtitle text="Data and Affordance" />
-
                 <SectionTitle text="Solutions" />
                 <Paragraph text="Unify team suggests two types of solutions as the team have developed both approaches to have more chances for the ideal solution." />
-
                 <SectionSubtitle text="Creating Connections without Having the Central Hub (Decentralized Network)" />
                 <Paragraph text="With this solution, the team has tried to solve one of the main problems that are related to organizational internal tasks. By integrating all the communication platforms, the stakeholder's using, the design tried to resolve the difficulties and complexity of communication." />
-
                 <SectionSubtitle text="Integrating Communication Services to Reduce the Complexity" />
                 <Paragraph text="This prototype has a priority on making stronger networks among members by matching users' similar interests and profiles. So that each member and group have their own networks to other members and groups without passing the center hub of the community." />
-
             </Grid>
         )
     }

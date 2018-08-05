@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button } from 'react-bootstrap'
 import ProjectYuri from './project-yuri'
-import Unify from './unify'
+import Unify from './unify/unify'
 
 export default class PostingDetail extends React.Component {
     constructor(props) {
