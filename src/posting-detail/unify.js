@@ -1,4 +1,5 @@
 import React from 'react'
+import { Grid, Row, Col } from 'react-bootstrap'
 import {
     Title,
     ProjectDescription,
@@ -7,11 +8,12 @@ import {
     SectionSubtitle,
     Paragraph
 } from '../components/kate-style-components/'
+import ContentCarousel from './content-carousel'
 
 export default class Unify extends React.Component {
     render() {
         return (
-            <div>
+            <Grid>
                 <Title text="Unify" />
                 <Separator />
                 <ProjectDescription text="Interests-sharing network for everyone" />
@@ -23,6 +25,7 @@ export default class Unify extends React.Component {
                 <SectionTitle text="Research" />
                 <SectionSubtitle text="Hunt Statement" />
                 <Paragraph text="We are going to figure out how all the communities of FemTechNet communicate with each other so that we can identify the key factors that enhance or hinder the interaction within communities." />
+                <ContentCarousel />
                 <SectionSubtitle text="Personas" />
                 <Paragraph text="The archetype of this persona is an educator and she represents a group of people who care to educate people." />
                 <SectionSubtitle text="Data and Affordance" />
@@ -36,7 +39,7 @@ export default class Unify extends React.Component {
                 <SectionSubtitle text="Integrating Communication Services to Reduce the Complexity" />
                 <Paragraph text="This prototype has a priority on making stronger networks among members by matching users' similar interests and profiles. So that each member and group have their own networks to other members and groups without passing the center hub of the community." />
 
-            </div>
+            </Grid>
         )
     }
 }

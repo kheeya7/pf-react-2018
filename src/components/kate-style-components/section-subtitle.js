@@ -9,7 +9,11 @@ export default class SectionSubtitle extends React.Component {
         }
 
         return (
-            <p style={sectionSubtitleStyle}>{this.props.text}</p>
+            <p
+                className="section-subtitle"
+                style={sectionSubtitleStyle}>
+                {this.props.text}
+            </p>
         )
     }
 }

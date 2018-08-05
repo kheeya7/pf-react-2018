@@ -1,3 +1,5 @@
+import './kate-style.css'
+
 import Title from './title'
 import ProjectDescription from './project-description'
 import Separator from './separator'

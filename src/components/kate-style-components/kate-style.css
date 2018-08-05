@@ -1,0 +1,10 @@
+.section-title {
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    line-height: 1.6rem;
+    color:#8c8e96;
+    border-bottom: 1px solid #e8e8ea;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.6rem; 
+}

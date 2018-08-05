@@ -9,7 +9,11 @@ export default class SectionTitle extends React.Component {
         }
 
         return (
-            <h3 style={sectionTitleStyle}>{this.props.text}</h3>
+            <h3
+                className="section-title"
+                style={sectionTitleStyle}>
+                {this.props.text}
+            </h3>
         )
     }
 }
