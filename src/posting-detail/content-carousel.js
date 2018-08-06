@@ -1,12 +1,19 @@
 import React from 'react'
+import Radium from 'radium'
 import {
     ButtonToolbar,
     ToggleButtonGroup,
     ToggleButton,
     Carousel
 } from 'react-bootstrap'
+import './content-carousel-style.css'
 
-export default class ControlledCarousel extends React.Component {
+const carouselItemContainerStyle = {
+    minHeight: "150px",
+    padding: "15px"
+}
+
+class ControlledCarousel extends React.Component {
     constructor(props, context) {
         super(props, context);
 
@@ -34,7 +41,7 @@ export default class ControlledCarousel extends React.Component {
         const { selectedIndex, direction } = this.state;
 
         return (
-            <div>
+            <div className="unify-content-carousel">
                 <div>
                     <ButtonToolbar>
                         <ToggleButtonGroup
@@ -54,17 +61,17 @@ export default class ControlledCarousel extends React.Component {
                     onSelect={this.handleSelect}
                 >
                     <Carousel.Item>
-                        <div>
+                        <div style={carouselItemContainerStyle}>
                             The archetype of this persona is an educator and she represents a group of people who care to educate people.
                     </div>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <div>
+                        <div style={carouselItemContainerStyle}>
                             To make a successful and innovative product, the designers need to determine the range of data to support the heuristic approach for design decisions. In addition, the designers should consider the affordance of the product to create a better and more natural user experience.
                     </div>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <div>
+                        <div style={carouselItemContainerStyle}>
                             Our team decided to use the card layout, which is the type of presenting information with intuitive images. With some self-explanatory images and short descriptions with the buttons, the users will get what they want more easily without having to think.
                     </div>
                     </Carousel.Item>
@@ -74,3 +81,4 @@ export default class ControlledCarousel extends React.Component {
     }
 }
 
+export default Radium(ControlledCarousel)

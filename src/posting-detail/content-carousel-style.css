@@ -1,0 +1,17 @@
+.unify-content-carousel .carousel-control.left {
+    background-image: unset;
+}
+
+.unify-content-carousel .carousel-control.right {
+    background-image: unset;
+}
+
+.unify-content-carousel .glyphicon-chevron-left {
+    margin-left: -110px;
+    color: #666;
+}
+
+.unify-content-carousel .glyphicon-chevron-right {
+    margin-right: -110px;
+    color: #666;
+}
