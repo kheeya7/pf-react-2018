@@ -6,16 +6,25 @@ import UnifyProto03 from '../../posting-detail/unify/unify-proto-03.png'
 
 export default class UnifyHeaderImage extends React.Component {
     render() {
+        const UnifyHeaderImageStyle = {
+            maxWidth: "70%",
+        }
+        const UnifyHeaderColStyle = {
+            textAlign: "center",
+            overflow: "hidden",
+            height: "238px",
+            borderBottom: "1px solid #e8e8ea",
+        }
         return (
             <Row>
-                <Col xs={6} md={4}>
-                    <Image src={UnifyProto01} />
+                <Col style={UnifyHeaderColStyle} xs={4} md={4}>
+                    <Image style={UnifyHeaderImageStyle} src={UnifyProto01} />
                 </Col>
-                <Col xs={6} md={4}>
-                    <Image src={UnifyProto02} />
+                <Col style={UnifyHeaderColStyle} xs={4} md={4}>
+                    <Image style={UnifyHeaderImageStyle} src={UnifyProto02} />
                 </Col>
-                <Col xs={6} md={4}>
-                    <Image src={UnifyProto03} />
+                <Col style={UnifyHeaderColStyle} xs={4} md={4}>
+                    <Image style={UnifyHeaderImageStyle} src={UnifyProto03} />
                 </Col>
             </Row>
         )

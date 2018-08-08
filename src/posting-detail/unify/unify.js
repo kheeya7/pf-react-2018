@@ -15,11 +15,11 @@ export default class Unify extends React.Component {
     render() {
         return (
             <Grid>
-                <UnifyHeaderImage />
                 <Title text="Unify" />
                 <Separator />
                 <ProjectDescription text="Interests-sharing network for everyone" />
                 <ProjectDescription text="who wants to make feminist innovation and technology" />
+                <UnifyHeaderImage />
                 <SectionTitle text="Project Overview" />
                 <Paragraph text="Unify team presents the high-fidelity prototype of the iOS application for FemTechNet users and people who want to share information about women in/and technology. This annotated portfolio shows the process of the application design through research from the ethnography interview, defining problems, research through design, and viable solutions with different types of prototypes." />
                 <SectionTitle text="Finding Problems" />
