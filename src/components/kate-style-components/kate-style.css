@@ -9,3 +9,19 @@
     padding-bottom: 0.6rem; 
 }
 
+#modal-container label.btn {
+    border: 0;
+    border-bottom: 0;
+    background-color: #FFF;
+    border-radius: 0;
+    background-image: unset;
+    box-shadow: unset;
+}
+
+#modal-container label.btn.active {
+    color: tomato;
+}
+
+#modal-container label.btn:hover {
+    color: orange;
+}

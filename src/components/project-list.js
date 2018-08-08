@@ -32,6 +32,7 @@ export default class ProjectList extends React.Component {
                                     key={projectItem.id}
                                     onClick={this.itemClicked}
                                     id={projectItem.id}
+                                    style={{ display: 'inline-block' }}
                                 >
                                     <ProjectPreview
                                         title={projectItem.title}

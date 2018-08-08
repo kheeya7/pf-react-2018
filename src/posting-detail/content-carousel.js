@@ -13,6 +13,26 @@ const carouselItemContainerStyle = {
     padding: "15px"
 }
 
+const toggleButtonStyle = {
+    border: "0",
+    borderBottom: "0",
+    backgroundColor: "#FFF",
+    borderRadius: "0",
+    backgroundImage: "unset",
+    boxShadow: "unset"
+}
+
+const selectedToggleButtonStyle = {
+    border: "0",
+    borderBottom: "2px solid tomato",
+    border: "0",
+    backgroundColor: "#FFF",
+    borderRadius: "0",
+    backgroundImage: "unset",
+    boxShadow: "unset",
+    color: "tomato",
+}
+
 class ControlledCarousel extends React.Component {
     constructor(props, context) {
         super(props, context);
@@ -49,9 +69,15 @@ class ControlledCarousel extends React.Component {
                             name="options"
                             value={this.state.selectedIndex}
                             onChange={this.handleChange}>
-                            <ToggleButton value={0}>Personas</ToggleButton>
-                            <ToggleButton value={1}>Data</ToggleButton>
-                            <ToggleButton value={2}>Affordance</ToggleButton>
+                            <ToggleButton
+                                style={this.state.selectedIndex === 0 ? selectedToggleButtonStyle : toggleButtonStyle} value={0}>Personas
+                            </ToggleButton>
+                            <ToggleButton
+                                style={this.state.selectedIndex === 1 ? selectedToggleButtonStyle : toggleButtonStyle} value={1}>Data
+                            </ToggleButton>
+                            <ToggleButton
+                                style={this.state.selectedIndex === 2 ? selectedToggleButtonStyle : toggleButtonStyle} value={2}>Affordance
+                            </ToggleButton>
                         </ToggleButtonGroup>
                     </ButtonToolbar>
                 </div>
