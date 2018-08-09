@@ -19,12 +19,7 @@ export default class ProjectList extends React.Component {
     render() {
         return (
             <Grid>
-                <Row>
-                    {/* <h3>
-                        {"Selected Tags: " + this.props.selectedTags.join('*')}
-                    </h3> */}
-                </Row>
-                <Row>
+                <Row style={{ height: '240px' }}>
                     {
                         tempProjectData.map((projectItem) => {
                             return (
@@ -32,7 +27,7 @@ export default class ProjectList extends React.Component {
                                     key={projectItem.id}
                                     onClick={this.itemClicked}
                                     id={projectItem.id}
-                                    style={{ display: 'inline-block' }}
+                                    style={{ display: 'inline-block', height: '240px' }}
                                 >
                                     <ProjectPreview
                                         title={projectItem.title}
