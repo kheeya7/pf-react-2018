@@ -30,10 +30,10 @@ export default class FilterControl extends React.Component {
     render() {
         const displayStyle = this.props.isFilterOpen ? "block" : "none"
 
-        const modalStyle = {
+        const modalContainerStyle = {
             display: displayStyle,
             position: "fixed",
-            zIndex: 10,
+            zIndex: 15,
             left: 0,
             top: 0,
             width: "100%",
@@ -45,13 +45,32 @@ export default class FilterControl extends React.Component {
         const modalContentStyle = {
             backgroundColor: "#fefefe",
             margin: "15% auto",
-            padding: "20px",
             border: "1px solid #888",
             width: "50%",
+            borderRadius: '8px',
+            maxWidth: '450px',
+            minWidth: '300px',
         }
 
         const filterStatusStyle = {
             marginTop: "12px"
+        }
+
+        const filterModalHeaderStyle = {
+            backgroundColor: 'tomato',
+            width: '100%',
+            height: '50px',
+            color: '#fff',
+            padding: '10px',
+            fontSize: '16px',
+            borderTopLeftRadius: '8px',
+            borderTopRightRadius: '8px',
+        }
+
+        const filterModalContentStyle = {
+            padding: '20px',
+            borderBottomLeftRadius: '8px',
+            borderBottomRightRadius: '8px'
         }
 
         const showFilterStatus = () => {
@@ -81,35 +100,42 @@ export default class FilterControl extends React.Component {
                 }
                 <div
                     id="modal-container"
-                    style={modalStyle}
+                    style={modalContainerStyle}
                     onClick={this.onModalContainerClicked}
                 >
                     <div style={modalContentStyle}>
-                        <span
-                            className="close"
-                            onClick={this.props.closeFilter}
+                        <div
+                            className='filter-modal-header'
+                            style={filterModalHeaderStyle}
                         >
-                            &times;
-                        </span>
-                        <ButtonToolbar>
-                            <ToggleButtonGroup
-                                type="checkbox"
-                                value={this.props.selectedTags}
-                                onChange={this.handleChange}>
-                                {
-                                    allPossibleTags.map((tag) => {
-                                        return (
-                                            <ToggleButton
-                                                key={tag}
-                                                value={tag}>
-                                                {tag}
-                                            </ToggleButton>
-                                        )
-                                    })
-                                }
-                            </ToggleButtonGroup>
-                        </ButtonToolbar>
-                        <p>Choose skill tag(s) you want to see.</p>
+                            <span
+                                className="close"
+                                onClick={this.props.closeFilter}
+                            >
+                                &times;
+                            </span>
+                            <div>Choose skill tag(s) you want to see.</div>
+                        </div>
+                        <div style={filterModalContentStyle}>
+                            <ButtonToolbar>
+                                <ToggleButtonGroup
+                                    type="checkbox"
+                                    value={this.props.selectedTags}
+                                    onChange={this.handleChange}>
+                                    {
+                                        allPossibleTags.map((tag) => {
+                                            return (
+                                                <ToggleButton
+                                                    key={tag}
+                                                    value={tag}>
+                                                    {tag}
+                                                </ToggleButton>
+                                            )
+                                        })
+                                    }
+                                </ToggleButtonGroup>
+                            </ButtonToolbar>
+                        </div>
                     </div>
                 </div>
             </div>

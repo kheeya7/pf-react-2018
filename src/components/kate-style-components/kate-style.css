@@ -16,6 +16,8 @@
     border-radius: 0;
     background-image: unset;
     box-shadow: unset;
+    font-size: 1.1em;
+    margin-bottom: 12px;
 }
 
 #modal-container label.btn.active {
