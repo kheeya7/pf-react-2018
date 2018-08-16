@@ -1,7 +1,8 @@
 import React from 'react'
+import _ from 'underscore'
 import ProjectPreview from './project-preview'
 import tempProjectData from '../shared/temp-project-data.json'
-import { Grid, Row, Col } from 'react-bootstrap'
+import { Row } from 'react-bootstrap'
 
 export default class ProjectList extends React.Component {
     constructor(props) {
@@ -16,9 +17,32 @@ export default class ProjectList extends React.Component {
         this.props.selectProjectById(e.currentTarget.id)
     }
 
+    getNumberOfFilteredProjects() {
+        if (this.props.selectedTags.length == 0) {
+            return tempProjectData.length
+        }
+
+        let count = 0;
+
+        for (var i = 0; i < tempProjectData.length; i++) {
+            const project = tempProjectData[i]
+
+            const intersection = _.intersection(project.tags, this.props.selectedTags)
+
+            if (intersection.length > 0) {
+                count += 1
+            }
+        }
+
+        return count;
+    }
+
     render() {
         return (
-            <Grid>
+            <div>
+                <Row>
+                    {this.getNumberOfFilteredProjects() + " project(s) meet the filter criteria."}
+                </Row>
                 <Row style={{ height: '240px' }}>
                     {
                         tempProjectData.map((projectItem) => {
@@ -48,7 +72,7 @@ export default class ProjectList extends React.Component {
                 {/* <Button onClick={this.buttonClicked} id='proj1'>Project One</Button>
                 <Button onClick={this.buttonClicked} id='proj2'>Project Two</Button>
                 <Button onClick={this.buttonClicked} id='proj3'>Project Three</Button> */}
-            </Grid>
+            </div>
         )
     }
 }

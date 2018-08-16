@@ -35,7 +35,8 @@
     "radium": "^0.24.1",
     "react": "^16.4.1",
     "react-bootstrap": "^0.32.1",
-    "react-dom": "^16.4.1"
+    "react-dom": "^16.4.1",
+    "underscore": "^1.9.1"
   },
   "keywords": [],
   "description": ""

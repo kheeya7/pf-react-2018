@@ -2,6 +2,7 @@ import React from 'react'
 import Carousel from '../components/carousel'
 import ProjectList from '../components/project-list'
 import FilterControl from '../components/filter-control'
+import { Grid } from 'react-bootstrap'
 import allPossibleTags from '../shared/all-possible-tags'
 
 export default class MainView extends React.Component {
@@ -41,16 +42,18 @@ export default class MainView extends React.Component {
         return (
             <div>
                 <Carousel />
-                <FilterControl
-                    selectedTags={this.state.selectedTags}
-                    isFilterOpen={this.state.isFilterOpen}
-                    setSelectedTags={this.setSelectedTags}
-                    openFilter={this.openFilter}
-                    closeFilter={this.closeFilter}
-                />
-                <ProjectList
-                    selectedTags={this.state.selectedTags}
-                    selectProjectById={this.props.selectProjectById} />
+                <Grid>
+                    <FilterControl
+                        selectedTags={this.state.selectedTags}
+                        isFilterOpen={this.state.isFilterOpen}
+                        setSelectedTags={this.setSelectedTags}
+                        openFilter={this.openFilter}
+                        closeFilter={this.closeFilter}
+                    />
+                    <ProjectList
+                        selectedTags={this.state.selectedTags}
+                        selectProjectById={this.props.selectProjectById} />
+                </Grid>
             </div>
         )
     }

@@ -3,9 +3,11 @@ import {
     Button,
     ToggleButtonGroup,
     ToggleButton,
-    ButtonToolbar
+    ButtonToolbar,
+    Row
 } from 'react-bootstrap'
 import allPossibleTags from '../shared/all-possible-tags'
+
 
 export default class FilterControl extends React.Component {
     constructor(props) {
@@ -48,12 +50,35 @@ export default class FilterControl extends React.Component {
             width: "50%",
         }
 
+        const filterStatusStyle = {
+            marginTop: "12px"
+        }
+
+        const showFilterStatus = () => {
+            if (this.props.selectedTags == 0) {
+                return (
+                    <Row style={filterStatusStyle}>
+                        <a href='javacsript:void(0)' onClick={this.props.openFilter}>
+                            All projects are currently shown. You can filter them out with project keywords!
+                        </a>
+                    </Row>
+                )
+            } else {
+                return (
+                    <Row style={filterStatusStyle}>
+                        <a href='javascript:void(0)' onClick={this.props.openFilter}>
+                            <p>{"Selected tags: " + this.props.selectedTags.join(' ')}</p>
+                        </a>
+                    </Row>
+                )
+            }
+        }
+
         return (
             <div>
-                <p>{"Selected tags: " + this.props.selectedTags.join(' ')}</p>
-                <Button onClick={this.props.openFilter}>
-                    Filter Control
-                </Button>
+                {
+                    showFilterStatus()
+                }
                 <div
                     id="modal-container"
                     style={modalStyle}
