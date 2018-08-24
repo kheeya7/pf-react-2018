@@ -43,7 +43,7 @@ export default class ProjectList extends React.Component {
                 <Row>
                     {this.getNumberOfFilteredProjects() + " project(s) meet the filter criteria."}
                 </Row>
-                <Row style={{ height: '240px' }}>
+                <Row>
                     {
                         tempProjectData.map((projectItem) => {
                             return (
@@ -51,12 +51,13 @@ export default class ProjectList extends React.Component {
                                     key={projectItem.id}
                                     onClick={this.itemClicked}
                                     id={projectItem.id}
-                                    style={{ display: 'inline-block', height: '240px' }}
+                                    style={{ display: 'inline-block' }}
                                 >
                                     <ProjectPreview
                                         title={projectItem.title}
                                         subtitle={projectItem.subtitle}
                                         imageUrl={projectItem.imageUrl}
+                                        role={projectItem.role}
                                         ProjectDescription={projectItem.projectDescription}
                                         projectTags={projectItem.tags}
                                         sectionTitle={projectItem.sectionTitle}

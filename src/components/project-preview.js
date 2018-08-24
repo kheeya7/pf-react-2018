@@ -4,11 +4,11 @@ import Radium from 'radium'
 
 const itemContainerStyle = {
     border: "1px solid #99AACC",
-    padding: "5px",
+    padding: "10px",
     cursor: "pointer",
     borderRadius: "4px",
-    width: "220px",
-    height: "220px",
+    width: "302px",
+    height: "430px",
     margin: "10px",
     ":hover": {
         transform: "translate(-0.2rem, -0.2rem)",
@@ -18,13 +18,19 @@ const itemContainerStyle = {
     }
 }
 
-const titleSylte = {
-    fontSize: "20px",
+const titleStyle = {
+    fontSize: "1.2em",
 }
 
-const subTitleSylte = {
-    fontSize: "16px",
+const subTitleStyle = {
+    fontSize: "1em",
     minHeight: "40px",
+    paddingTop: "5px"
+}
+
+const roleStyle = {
+    fontSize: "0.8em",
+    color: "teal",
 }
 
 const descriptionStyle = {
@@ -34,14 +40,21 @@ const descriptionStyle = {
     overflow: "hidden"
 }
 
-const overlayPanel = {
-    position: "relative",
-    width: '100%',
-    top: "-90px",
-    zIndex: "10",
-    float: "left",
-    padding: "5px",
-    background: "rgba(255,255,255,.6)",
+const tagStyle = {
+    fontSize: "0.7em",
+    color: "#999",
+    textOverflow: "ellipsis",
+    overflow: "hidden",
+    width: "100%",
+    whiteSpace: "nowrap",
+    position: 'absolute',
+    bottom: '0px'
+}
+
+const projectPreviewTextContainerStyle = {
+    paddingTop: '10px',
+    height: '120px',
+    position: 'relative',
 }
 
 class ProjectPreview extends React.Component {
@@ -59,9 +72,11 @@ class ProjectPreview extends React.Component {
                 <div style={itemContainerStyle} >
                     <div>
                         <Image src={this.props.imageUrl} responsive />
-                        <div style={overlayPanel}>
-                            <div style={titleSylte}>{this.props.title}</div>
-                            <div style={subTitleSylte}>{this.props.subtitle}</div>
+                        <div style={projectPreviewTextContainerStyle}>
+                            <div style={roleStyle}>      {this.props.role.toUpperCase()}</div>
+                            <div style={titleStyle}>{this.props.title}</div>
+                            <div style={subTitleStyle}>{this.props.subtitle}</div>
+                            <div style={tagStyle}>{this.props.projectTags.join(', ')}</div>
                         </div>
                     </div>
                 </div>
