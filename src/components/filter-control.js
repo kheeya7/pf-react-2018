@@ -73,31 +73,61 @@ export default class FilterControl extends React.Component {
             borderBottomRightRadius: '8px'
         }
 
-        const showFilterStatus = () => {
-            if (this.props.selectedTags == 0) {
-                return (
-                    <Row style={filterStatusStyle}>
-                        <a href='javacsript:void(0)' onClick={this.props.openFilter}>
-                            All projects are currently shown. You can filter them out with project keywords!
-                        </a>
-                    </Row>
-                )
-            } else {
-                return (
-                    <Row style={filterStatusStyle}>
-                        <a href='javascript:void(0)' onClick={this.props.openFilter}>
-                            <p>{"Selected tags: " + this.props.selectedTags.join(' ')}</p>
-                        </a>
-                    </Row>
-                )
-            }
-        }
+        // const filteritemContainerStyle = {
+        //     border: "1px solid #99AACC",
+        //     backgroundColor: "#8490E6",
+        //     color: "#fff",
+        //     padding: "10px",
+        //     cursor: "pointer",
+        //     borderRadius: "4px",
+        //     width: "302px",
+        //     height: "430px",
+        //     margin: "10px",
+        //     ":hover": {
+        //         transform: "translate(-0.2rem, -0.2rem)",
+        //         boxShadow: "0px 1px 2px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60,64,67, 0.15)",
+        //         border: "1px solid rgba(255,122,122,0.5)",
+        //         cursor: "pointer",
+        //     }
+        // }
+
+        // const linkStyle = {
+        //     textDecoration: 'none',
+        //     color: 'white',
+        // }
+
+        // const showFilterStatus = () => {
+        //     if (this.props.selectedTags == 0) {
+        //         return (
+        //             <div>
+        //                 <div>
+        //                     <a
+        //                         style={linkStyle}
+        //                         href='javacsript:void(0)'
+        //                         onClick={this.props.openFilter}>
+        //                         All projects are currently shown. You can filter them out with project keywords!
+        //                  </a>
+        //                 </div>
+        //             </div>
+        //         )
+        //     } else {
+        //         return (
+        //             <div>
+        //                 <div>
+        //                     <a
+        //                         style={linkStyle}
+        //                         href='javacsript:void(0)'
+        //                         onClick={this.props.openFilter}>
+        //                         <p>{"Selected tags: " + this.props.selectedTags.join(' ')}</p>
+        //                     </a>
+        //                 </div>
+        //             </div>
+        //         )
+        //     }
+        // }
 
         return (
             <div>
-                {
-                    showFilterStatus()
-                }
                 <div
                     id="modal-container"
                     style={modalContainerStyle}
