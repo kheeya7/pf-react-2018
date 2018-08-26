@@ -73,7 +73,7 @@ class ProjectPreview extends React.Component {
                     <div>
                         <Image src={this.props.imageUrl} responsive />
                         <div style={projectPreviewTextContainerStyle}>
-                            <div style={roleStyle}>      {this.props.role.toUpperCase()}</div>
+                            <div style={roleStyle}>{this.props.role.toUpperCase()}</div>
                             <div style={titleStyle}>{this.props.title}</div>
                             <div style={subTitleStyle}>{this.props.subtitle}</div>
                             <div style={tagStyle}>{this.props.projectTags.join(', ')}</div>
