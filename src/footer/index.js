@@ -8,7 +8,7 @@ export default class FooterView extends React.Component {
             <div className='footer-container'>
                 <Grid>
                     <Row className='footer-row'>
-                        <Col xs={6} md={4}>
+                        <Col xs={4} md={4}>
                             <div className='title'>
                                 Links from Kate
                             </div>
@@ -29,14 +29,20 @@ export default class FooterView extends React.Component {
                                 </ul>
                             </div>
                         </Col>
-                        <Col xs={6} md={4}>
+                        <Col xs={4} md={4}>
                             <div className='title'>
                                 Latest Updates
                             </div>
-                            <div>
-                            </div>
+                            <ul>
+                                <li>
+                                    <a href='/about'>Blog: an annotated portfolio Unify</a>
+                                </li>
+                                <li>
+                                    <a href='http://katesohng.com/blog' target='_blank'>YouTube: Project Yuri video</a>
+                                </li>
+                            </ul>
                         </Col>
-                        <Col xs={6} md={4}>
+                        <Col xs={4} md={4}>
                             <div className='title'>
                                 Follow Me on
                             </div>
