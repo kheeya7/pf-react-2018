@@ -1,23 +1,27 @@
 import React from 'react'
-import { Nav, Navbar, NavItem } from 'react-bootstrap'
+import MainImage from '../../dist/assets/intro-image.jpg'
+import { Button, Col, Row } from 'react-bootstrap'
+import './index.less'
 
 export default class HeaderView extends React.Component {
     render() {
         return (
             <div>
-                <Navbar inverse>
-                    <Navbar.Header>
-                        <Navbar.Brand>
-                            <a href="#home">KS</a>
-                        </Navbar.Brand>
-                    </Navbar.Header>
-                    <Nav pullRight>
-                        <NavItem eventKey={1} href="#">
-                            About
-                        </NavItem>
-                    </Nav>
-                </Navbar>
-            </div>
+                <Row className="intro-container">
+                    <Col xs={6} md={6}>
+                        <img src={MainImage} className="img-responsive"></img>
+                    </Col>
+                    <Col xs={6} md={6}>
+                        <div className="intro-text-wrap">
+                            <h1 className="intro-title">UI/UX Designer &amp;
+                            Front-end Developer</h1>
+                            <div className="intro-name"> Kate Sohng </div>
+                            <div className="intro-selfintro">Lalala La La Love Song Lalala La La Love Song Lalala La La Love Song Lalala La La Love Song</div>
+                            <Button className="button">About Kate</Button>
+                        </div>
+                    </Col>
+                </Row>
+            </div >
         )
     }
 }

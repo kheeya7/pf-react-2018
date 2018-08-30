@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default class Separator extends React.Component {
+export default class AccentSeparator extends React.Component {
     render() {
         const separatorStyle = {
             margin: "0 auto 20px",

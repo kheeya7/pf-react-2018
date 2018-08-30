@@ -4,6 +4,7 @@ import ProjectPreview from './project-preview'
 import tempProjectData from '../shared/temp-project-data.json'
 import FilterControl from './filter-control'
 import { Row, Button } from 'react-bootstrap'
+import { AccentSeparator } from './kate-style-components'
 
 const filterItemContainerStyle = {
     border: "1px solid #99AACC",
@@ -124,7 +125,8 @@ export default class ProjectList extends React.Component {
 
     render() {
         return (
-            <div>
+            <div style={{ marginTop: '40px' }}>
+                <AccentSeparator />
                 <Row>
                     {this.getNumberOfFilteredProjects() + " project(s) meet the filter criteria."}
                 </Row>
