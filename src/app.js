@@ -35,7 +35,7 @@ class App extends React.Component {
       )
     } else {
       return (
-        <div>
+        <div className='portfolio-top-container'>
           <HeaderView />
           <MainView selectProjectById={this.selectProjectById} />
           <FooterView />

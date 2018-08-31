@@ -8,7 +8,7 @@ export default class HeaderView extends React.Component {
         return (
             <div>
                 <Row className="intro-container">
-                    <Col xs={6} md={6}>
+                    <Col xs={6} md={6} style={{ padding: '0px' }}>
                         <img src={MainImage} className="img-responsive"></img>
                     </Col>
                     <Col xs={6} md={6}>

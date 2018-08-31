@@ -126,7 +126,9 @@ export default class ProjectList extends React.Component {
     render() {
         return (
             <div style={{ marginTop: '40px' }}>
-                <AccentSeparator />
+                <AccentSeparator
+                    separatorCharacter='✻'
+                />
                 <Row>
                     {this.getNumberOfFilteredProjects() + " project(s) meet the filter criteria."}
                 </Row>

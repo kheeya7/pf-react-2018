@@ -1,4 +1,4 @@
-import './kate-style.css'
+import './kate-style.less'
 
 import Title from './title'
 import ProjectDescription from './project-description'
