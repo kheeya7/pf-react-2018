@@ -1,6 +1,6 @@
 import './styles/bootstrap.min.css'
 import './styles/bootstrap-theme.min.css'
-import './style.css'
+import './style.less'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './app'

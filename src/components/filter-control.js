@@ -1,13 +1,12 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import {
-    Button,
     ToggleButtonGroup,
     ToggleButton,
     ButtonToolbar,
-    Row
 } from 'react-bootstrap'
 import allPossibleTags from '../shared/all-possible-tags'
-
+import { prototype } from 'events';
 
 export default class FilterControl extends React.Component {
     constructor(props) {
@@ -118,4 +117,11 @@ export default class FilterControl extends React.Component {
             </div>
         )
     }
+}
+
+FilterControl.PropTypes = {
+    closeFilter: PropTypes.func.isRequired,
+    setSelectedTags: PropTypes.func.isRequired,
+    isFilterOpen: PropTypes.bool.isRequired,
+    selectedTags: PropTypes.array.isRequired,
 }

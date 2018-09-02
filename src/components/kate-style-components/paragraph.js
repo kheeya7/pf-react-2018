@@ -1,16 +1,22 @@
 import React from 'react'
-import { Grid, Row, Col } from 'react-bootstrap'
+import PropTypes from 'prop-types'
 
-export default class Paragraph extends React.Component {
-    render() {
-        const paragraphStyle = {
-            margin: "12px",
-            fontSize: "15px",
-            textAlign: "left",
-        }
-
-        return (
-            <p style={paragraphStyle}>{this.props.text}</p>
-        )
+export function Paragraph(props) {
+    const paragraphStyle = {
+        margin: "12px",
+        fontSize: "15px",
+        textAlign: "left",
     }
+
+    return (
+        <p style={paragraphStyle}>{props.text}</p>
+    )
+}
+
+Paragraph.propTypes = {
+    text: PropTypes.string,
+}
+
+Paragraph.propTypes = {
+    text: '',
 }

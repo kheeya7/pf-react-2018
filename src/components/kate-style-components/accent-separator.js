@@ -1,11 +1,18 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-export default class AccentSeparator extends React.Component {
-    render() {
-        return (
-            <div className='separator separator-danger'>
-                {this.props.separatorCharacter}
-            </div>
-        )
-    }
+export function AccentSeparator(props) {
+    return (
+        <div className='separator separator-danger'>
+            {props.separatorCharacter}
+        </div>
+    )
+}
+
+AccentSeparator.propTypes = {
+    separatorCharacter: PropTypes.string,
+}
+
+AccentSeparator.defaultProps = {
+    separatorCharacter: '✻',
 }

@@ -1,5 +1,4 @@
 import React from 'react'
-import JakeTheDog from '../assets/jake.png'
 import HeaderView from './header'
 import FooterView from './footer'
 import MainView from './main'

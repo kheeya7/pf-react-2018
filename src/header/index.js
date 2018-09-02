@@ -1,7 +1,6 @@
 import React from 'react'
 import MainImage from '../../dist/assets/intro-image.jpg'
 import { Button, Col, Row } from 'react-bootstrap'
-import './index.less'
 
 export default class HeaderView extends React.Component {
     render() {
