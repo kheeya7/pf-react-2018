@@ -119,7 +119,7 @@ export default class FilterControl extends React.Component {
     }
 }
 
-FilterControl.PropTypes = {
+FilterControl.propTypes = {
     closeFilter: PropTypes.func.isRequired,
     setSelectedTags: PropTypes.func.isRequired,
     isFilterOpen: PropTypes.bool.isRequired,

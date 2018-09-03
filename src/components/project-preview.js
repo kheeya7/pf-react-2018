@@ -7,9 +7,9 @@ const itemContainerStyle = {
     padding: "10px",
     cursor: "pointer",
     borderRadius: "4px",
-    width: "302px",
-    height: "430px",
-    margin: "10px",
+    width: "342px",
+    height: "470px",
+    margin: "15px",
     ":hover": {
         transform: "translate(-0.2rem, -0.2rem)",
         boxShadow: "0px 1px 2px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60,64,67, 0.15)",
