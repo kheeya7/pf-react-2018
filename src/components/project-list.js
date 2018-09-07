@@ -141,34 +141,36 @@ export default class ProjectList extends React.Component {
                     setSelectedTags={this.setSelectedTags}
                     closeFilter={this.closeFilter}
                 />
-                {
-                    this.showFilterCard()
-                }
-                {
-                    tempProjectData.map((projectItem) => {
-                        return (
-                            <div
-                                key={projectItem.id}
-                                onClick={this.itemClicked}
-                                id={projectItem.id}
-                                style={{ float: 'left' }}
-                            >
-                                <ProjectPreview
-                                    title={projectItem.title}
-                                    subtitle={projectItem.subtitle}
-                                    imageUrl={projectItem.imageUrl}
-                                    role={projectItem.role}
-                                    ProjectDescription={projectItem.projectDescription}
-                                    projectTags={projectItem.tags}
-                                    sectionTitle={projectItem.sectionTitle}
-                                    sectionSubtitle={projectItem.sectionSubtitle}
-                                    paragraph={projectItem.paragraph}
-                                    selectedTags={this.state.selectedTags}
-                                />
-                            </div>
-                        )
-                    })
-                }
+                <div className="clearfix">
+                    {
+                        this.showFilterCard()
+                    }
+                    {
+                        tempProjectData.map((projectItem) => {
+                            return (
+                                <div
+                                    key={projectItem.id}
+                                    onClick={this.itemClicked}
+                                    id={projectItem.id}
+                                    style={{ float: 'left' }}
+                                >
+                                    <ProjectPreview
+                                        title={projectItem.title}
+                                        subtitle={projectItem.subtitle}
+                                        imageUrl={projectItem.imageUrl}
+                                        role={projectItem.role}
+                                        ProjectDescription={projectItem.projectDescription}
+                                        projectTags={projectItem.tags}
+                                        sectionTitle={projectItem.sectionTitle}
+                                        sectionSubtitle={projectItem.sectionSubtitle}
+                                        paragraph={projectItem.paragraph}
+                                        selectedTags={this.state.selectedTags}
+                                    />
+                                </div>
+                            )
+                        })
+                    }
+                </div>
             </div>
         )
     }

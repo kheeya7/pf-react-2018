@@ -3,6 +3,7 @@ import HeaderView from './header'
 import FooterView from './footer'
 import MainView from './main'
 import PostingDetail from './posting-detail'
+import { ContactMeSection } from './components/contact-me-section'
 
 class App extends React.Component {
   constructor(props) {
@@ -37,6 +38,7 @@ class App extends React.Component {
         <div className='portfolio-top-container'>
           <HeaderView />
           <MainView selectProjectById={this.selectProjectById} />
+          <ContactMeSection />
           <FooterView />
         </div>
       )
