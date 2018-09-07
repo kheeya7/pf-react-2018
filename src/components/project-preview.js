@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, Col, Row } from 'react-bootstrap'
+import { Image } from 'react-bootstrap'
 import Radium from 'radium'
 
 const itemContainerStyle = {

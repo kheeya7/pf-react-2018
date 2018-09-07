@@ -5,10 +5,11 @@ import tempProjectData from '../shared/temp-project-data.json'
 import FilterControl from './filter-control'
 import { Row, Button } from 'react-bootstrap'
 import { AccentSeparator } from './kate-style-components'
+import FilterCardBackground from '../../dist/assets/filter-card.png'
 
 const filterItemContainerStyle = {
     border: "1px solid #99AACC",
-    backgroundColor: "#8490E6",
+    backgroundImage: "url(" + FilterCardBackground + ")",
     color: "#fff",
     padding: "30px 15px 20px 15px",
     cursor: "pointer",
@@ -23,6 +24,23 @@ const filterItemContainerStyle = {
         cursor: "pointer",
     }
 }
+
+const editFilterButtonStyle = {
+    position: "relative",
+    fontSize: "1.2em",
+    border: "0",
+    color: "white",
+    backgroundColor: "#74AB9A",
+    backgroundImage: "unset",
+    borderRadius: "0",
+    boxShadow: "unset",
+    padding: ".7em 2em",
+    borderRadius: "0.2em",
+    // &:hover {
+    //     background-color:#6470C6,
+    //     border: 1px solid #94A0E6,
+}
+
 
 const linkStyle = {
     textDecoration: 'none',
@@ -108,14 +126,14 @@ export default class ProjectList extends React.Component {
     showFilterCard() {
         return (
             <div style={{ float: 'left' }}>
-                <div style={filterItemContainerStyle}>
-                    <div style={{ fontSize: '1.2em', fontWeight: 'bold', marginBottom: '1em' }}>
+                <div style={filterItemContainerStyle} >
+                    <div style={{ fontSize: '1.5em', fontWeight: 'bold', marginBottom: '1em', padding: '0 10px' }}>
                         ABOUT PROJECTS
                     </div>
-                    <div style={{ fontSize: '1em', marginBottom: '150px' }}>
-                        My projects over past few years. You can filter these projects by the skills and techniques that were used in my projects.
+                    <div style={{ fontSize: '1.2em', marginBottom: '100px', lineHeight: '2em', padding: '0 10px' }}>
+                        These are my projects over past few years. You can filter them out by skills and techniques I used in projects.
                     </div>
-                    <Button onClick={this.openFilter}>
+                    <Button style={editFilterButtonStyle} onClick={this.openFilter}>
                         Edit Filter
                     </Button>
                 </div>
