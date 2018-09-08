@@ -3,49 +3,8 @@ import _ from 'underscore'
 import ProjectPreview from './project-preview'
 import tempProjectData from '../shared/temp-project-data.json'
 import FilterControl from './filter-control'
-import { Row, Button } from 'react-bootstrap'
+import { Row, Col, Button } from 'react-bootstrap'
 import { AccentSeparator } from './kate-style-components'
-import FilterCardBackground from '../../dist/assets/filter-card.png'
-
-const filterItemContainerStyle = {
-    border: "1px solid #99AACC",
-    backgroundImage: "url(" + FilterCardBackground + ")",
-    color: "#fff",
-    padding: "30px 15px 20px 15px",
-    cursor: "pointer",
-    borderRadius: "4px",
-    width: "342px",
-    height: "470px",
-    margin: "15px",
-    ":hover": {
-        transform: "translate(-0.2rem, -0.2rem)",
-        boxShadow: "0px 1px 2px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60,64,67, 0.15)",
-        border: "1px solid rgba(255,122,122,0.5)",
-        cursor: "pointer",
-    }
-}
-
-const editFilterButtonStyle = {
-    position: "relative",
-    fontSize: "1.2em",
-    border: "0",
-    color: "white",
-    backgroundColor: "#74AB9A",
-    backgroundImage: "unset",
-    borderRadius: "0",
-    boxShadow: "unset",
-    padding: ".7em 2em",
-    borderRadius: "0.2em",
-    // &:hover {
-    //     background-color:#6470C6,
-    //     border: 1px solid #94A0E6,
-}
-
-
-const linkStyle = {
-    textDecoration: 'none',
-    color: 'white',
-}
 
 export default class ProjectList extends React.Component {
     constructor(props) {
@@ -125,25 +84,25 @@ export default class ProjectList extends React.Component {
 
     showFilterCard() {
         return (
-            <div style={{ float: 'left' }}>
-                <div style={filterItemContainerStyle} >
-                    <div style={{ fontSize: '1.5em', fontWeight: 'bold', marginBottom: '1em', padding: '0 10px' }}>
-                        ABOUT PROJECTS
-                    </div>
-                    <div style={{ fontSize: '1.2em', marginBottom: '100px', lineHeight: '2em', padding: '0 10px' }}>
-                        These are my projects over past few years. You can filter them out by skills and techniques I used in projects.
-                    </div>
-                    <Button style={editFilterButtonStyle} onClick={this.openFilter}>
-                        Edit Filter
-                    </Button>
-                </div>
+            <div className="filter-item-container">
+                <div style={{ fontSize: '1.5em', fontWeight: 'bold', marginBottom: '1em', padding: '0 10px' }}>
+                    ABOUT PROJECTS
+            </div>
+                <div style={{ fontSize: '1.2em', marginBottom: '100px', lineHeight: '2em', padding: '0 10px' }}>
+                    These are my projects over past few years. You can filter them out by skills and techniques I used in projects.
+            </div>
+                <Button
+                    className="edit-filter-button"
+                    onClick={this.openFilter}>
+                    Edit Filter
+                </Button>
             </div>
         )
     }
 
     render() {
         return (
-            <div style={{ marginTop: '40px' }}>
+            <div className="project-list-content">
                 <AccentSeparator
                     separatorCharacter='✻'
                 />
@@ -153,24 +112,26 @@ export default class ProjectList extends React.Component {
                 <Row>
                     {this.showFilterStatus()}
                 </Row>
-                <FilterControl
-                    selectedTags={this.state.selectedTags}
-                    isFilterOpen={this.state.isFilterOpen}
-                    setSelectedTags={this.setSelectedTags}
-                    closeFilter={this.closeFilter}
-                />
-                <div className="clearfix">
-                    {
-                        this.showFilterCard()
-                    }
+                <Row>
+                    <FilterControl
+                        selectedTags={this.state.selectedTags}
+                        isFilterOpen={this.state.isFilterOpen}
+                        setSelectedTags={this.setSelectedTags}
+                        closeFilter={this.closeFilter}
+                    />
+                    <Col xs={12} sm={6} md={4}>
+                        {
+                            this.showFilterCard()
+                        }
+                    </Col>
                     {
                         tempProjectData.map((projectItem) => {
                             return (
-                                <div
+                                <Col
+                                    xs={12} sm={6} md={4}
                                     key={projectItem.id}
                                     onClick={this.itemClicked}
                                     id={projectItem.id}
-                                    style={{ float: 'left' }}
                                 >
                                     <ProjectPreview
                                         title={projectItem.title}
@@ -184,11 +145,11 @@ export default class ProjectList extends React.Component {
                                         paragraph={projectItem.paragraph}
                                         selectedTags={this.state.selectedTags}
                                     />
-                                </div>
+                                </Col>
                             )
                         })
                     }
-                </div>
+                </Row>
             </div>
         )
     }
