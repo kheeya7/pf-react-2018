@@ -106,6 +106,9 @@ export default class ProjectList extends React.Component {
                 <AccentSeparator
                     separatorCharacter='✻'
                 />
+                <Row className="project-section-title">
+                    Projects 
+                </Row>
                 <Row>
                     {this.getNumberOfFilteredProjects() + " project(s) meet the filter criteria."}
                 </Row>
