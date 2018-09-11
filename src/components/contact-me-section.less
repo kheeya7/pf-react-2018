@@ -5,8 +5,8 @@
     padding: 4.3em;
     background-image: url('../../dist/assets/background-image-1.jpg');
     background-position: center;
-
-    height: 400px;
+    min-width: 420px;
+    height: auto;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -25,13 +25,18 @@
 
     .contact-me-title{
         position: relative;
-        font-size: 2.1em; 
     }
+    
     .contact-me-description{
         position: relative;
-        padding-top: 1em;
-        padding-bottom: 3em;
         line-height: 2em;
+        padding: 1em 10em 3em 10em;
+        @media (min-width: 1400px) {
+            padding: 1em 30em 3em 30em;
+        }
+        @media (max-width: 700px) {
+            padding: 1em 0 0 0;
+        }
     }
     .btn.btn-default{
         position: relative;

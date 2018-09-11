@@ -3,17 +3,36 @@
     width: 100%;
     text-align: center;
 
-    .experience-section-title {
-        font-size: 2em;
-        margin-bottom: 30px;
+    .experience-item {
+        margin-bottom: 15px;
+    }
+
+    .experience-icon {
+        size: 50%;
+        margin-bottom: 15px;
+        @media (min-width: 1200px) {
+            size: 100%;
+        }
     }
 
     .experience-role {
         font-size: 1.3em;
         margin: 10px 0 15px 0;
     }
-    
-    .experience-icon {
-        width: 20%;
+
+    .experience-description {
+        padding: 0;
+        font-size: 1.1em;
+        @media (min-width: 1200px) {
+            padding: 0px;
+        }
+        a,
+        .link{
+            color: tomato;
+        }
+        a:hover{
+            color: #6470C6;
+            text-decoration: none;
+        }
     }
 }

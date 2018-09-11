@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="75px" viewBox="0 0 60 75" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>graphic-designer-icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="graphic-designer-icon" stroke-width="2">
+            <path d="M34,1 L2,1 C1.44771525,1 1,1.44771525 1,2 L1,73 C1,73.5522847 1.44771525,74 2,74 L58,74 C58.5522847,74 59,73.5522847 59,73 L59,26 L37,26 C35.3431458,26 34,24.6568542 34,23 L34,1 Z" id="folded-paper-icon-copy-2" stroke="#000000"></path>
+            <path d="M34.2962673,0.705414583 L59.3004975,25.7299472" id="Path-Copy-2" stroke="#000000"></path>
+            <polygon id="Triangle" stroke="#040404" points="36.5 30 45 45 28 45"></polygon>
+            <path d="M24.5,67 C19.8055796,67 16,63.1944204 16,58.5 C16,53.8055796 19.8055796,50 24.5,50 C29.1944204,50 33,53.8055796 33,58.5 C33,63.1944204 29.1944204,67 24.5,67 Z M24,33 L40,33 L40,49 L24,49 L24,33 Z" id="Oval" stroke="#040404" transform="translate(28.000000, 50.000000) rotate(-90.000000) translate(-28.000000, -50.000000) "></path>
+        </g>
+    </g>
+</svg>

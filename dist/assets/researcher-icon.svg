@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="75px" viewBox="0 0 60 75" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>researcher-icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="researcher-icon">
+            <path d="M34,1 L2,1 C1.44771525,1 1,1.44771525 1,2 L1,73 C1,73.5522847 1.44771525,74 2,74 L58,74 C58.5522847,74 59,73.5522847 59,73 L59,26 L37,26 C35.3431458,26 34,24.6568542 34,23 L34,1 Z" id="folded-paper-icon-copy" stroke="#000000" stroke-width="2"></path>
+            <path d="M34.2962673,0.705414583 L59.3004975,25.7299472" id="Path-Copy" stroke="#000000" stroke-width="2"></path>
+            <g id="Search" transform="translate(27.000000, 42.000000)" fill="#000000">
+                <path d="M27.710775,26.2439378 L21.0725727,19.9707871 C25.7238326,15.5240659 25.8655636,8.38600604 21.3941359,3.77575728 C16.9227083,-0.834491479 9.42359355,-1.28223475 4.37993454,2.75990483 C-0.66372446,6.8020444 -1.46355539,13.9008116 2.56525575,18.8657865 C6.5940669,23.8307614 14.0229909,24.9014713 19.4202064,21.2950431 L26.1877243,27.7251932 C26.6123246,28.1011165 27.2739895,28.0900241 27.6843685,27.700103 C28.0947474,27.3101819 28.1064217,26.6815017 27.710775,26.2780681 L27.710775,26.2439378 Z M2.34335919,11.7795132 C2.34335919,6.50161155 6.84642644,2.2230269 12.4012414,2.2230269 C17.9560564,2.2230269 22.4591236,6.50161155 22.4591236,11.7795132 C22.4591236,17.0574148 17.9560564,21.3359995 12.4012414,21.3359995 C6.84642644,21.3359995 2.34335919,17.0574148 2.34335919,11.7795132 Z" id="Shape"></path>
+            </g>
+            <path d="M9,17 L27,17" id="Line-Copy-2" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+            <path d="M9,25 L27,25" id="Line-Copy-3" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+            <path d="M9,33 L34,33" id="Line-Copy-4" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+            <path d="M9,41 L34,41" id="Line-Copy-5" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+        </g>
+    </g>
+</svg>

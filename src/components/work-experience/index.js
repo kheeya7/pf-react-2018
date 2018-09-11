@@ -2,50 +2,54 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Row, Col } from 'react-bootstrap'
 import { AccentSeparator } from '../kate-style-components'
-import Icon01 from '../../../dist/assets/place-holder-work-exp.png'
+import Icon01 from '../../../dist/assets/researcher-icon.svg'
+import Icon02 from '../../../dist/assets/web-dev-icon.svg'
+import Icon03 from '../../../dist/assets/graphic-designer-icon.svg'
 
 export function WorkExperience(props) {
     return (
         <div>
-            <AccentSeparator
+            <div className='experience-container'>
+                <Row>
+                    <h2>
+                        Experience
+                    </h2>
+                </Row>
+                <AccentSeparator
                 separatorCharacter='♦'
             />
-            <div className='experience-container'>
-                <Row className='experience-section-title'>
-                    Experience
-                </Row>
                 <Row>
-                    <Col xs={12} sm={4} md={4}>
+                    <Col xs={12} sm={4} md={4} className="experience-item">
                         <div>
                             <img src={Icon01} className='experience-icon'></img> 
                         </div>
-                        <div className='experience-role'>
+                        <h3 className='experience-role'>
                             UX Researcher &amp; Internship
-                        </div>    
-                        <div>
-                            Internship as a user experience researcher for real world problems.
+                        </h3>    
+                        <div className='experience-description'>
+                        Internship as a user experience researcher at the <a href="http://faculty.washington.edu/michamc/lab/" target="_blank">POC lab</a> at the University of Washington. 
                         </div>
                     </Col>
-                    <Col xs={12} sm={4} md={4}>
+                    <Col xs={12} sm={4} md={4} className="experience-item">
                         <div>
-                            <img src={Icon01} className='experience-icon'></img> 
+                            <img src={Icon02} className='experience-icon'></img> 
                         </div>
-                        <div className='experience-role'>
+                        <h3 className='experience-role'>
                             Web Designer
-                        </div>
-                        <div>
-                            Web/graphic designer for a web development department
+                        </h3>
+                        <div className='experience-description'>
+                            <a href="http://katesohng.com/portfolio-2015/portfolio_hands_on_bg.html" target="_blank">Web designer</a> at an online e-commerce company.
                         </div>
                     </Col>
-                    <Col xs={12} sm={4} md={4}>
+                    <Col xs={12} sm={4} md={4} className="experience-item">
                         <div>
-                            <img src={Icon01} className='experience-icon'></img> 
+                            <img src={Icon03} className='experience-icon'></img> 
                         </div>
-                        <div className='experience-role'>
-                            Graphic Desinger
-                        </div>
-                        <div>
-                            Graphic designer at hunya.com
+                        <h3 className='experience-role'>
+                            Graphic Desinger 
+                        </h3>
+                        <div className='experience-description'>
+                            <a href="http://katesohng.com/portfolio-2015/portfolio_posters.html" target="_blank">Graphic designer</a> at e-commerce companies.
                         </div>
                     </Col>
                 </Row>

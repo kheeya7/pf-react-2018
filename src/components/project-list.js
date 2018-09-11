@@ -103,12 +103,12 @@ export default class ProjectList extends React.Component {
     render() {
         return (
             <div className="project-list-content">
+                <Row>
+                    <h2>Projects</h2>
+                </Row>
                 <AccentSeparator
                     separatorCharacter='✻'
                 />
-                <Row className="project-section-title">
-                    Projects 
-                </Row>
                 <Row>
                     {this.getNumberOfFilteredProjects() + " project(s) meet the filter criteria."}
                 </Row>

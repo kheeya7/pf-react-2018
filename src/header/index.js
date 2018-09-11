@@ -11,7 +11,7 @@ export default class HeaderView extends React.Component {
                         <h1 className="intro-title">UI/UX Designer &amp;
                             Front-end Developer</h1>
                         <div className="intro-name"> Kate Sohng </div>
-                        <div className="intro-selfintro">Lalala La La Love Song Lalala La La Love Song Lalala La La Love Song Lalala La La Love Song</div>
+                        <div className="intro-selfintro">I'm Kate Sohng. I love to code and design that bring critical ideas into real world issues.</div>
                         <Button className="button">About Kate</Button>
                     </div>
                     <div className="intro-image-container">
