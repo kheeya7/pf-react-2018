@@ -129,27 +129,39 @@ export default class ProjectList extends React.Component {
                     </Col>
                     {
                         tempProjectData.map((projectItem) => {
-                            return (
-                                <Col
-                                    xs={12} sm={6} md={4} lg={4}
-                                    key={projectItem.id}
-                                    onClick={this.itemClicked}
-                                    id={projectItem.id}
-                                >
-                                    <ProjectPreview
-                                        title={projectItem.title}
-                                        subtitle={projectItem.subtitle}
-                                        imageUrl={projectItem.imageUrl}
-                                        role={projectItem.role}
-                                        ProjectDescription={projectItem.projectDescription}
-                                        projectTags={projectItem.tags}
-                                        sectionTitle={projectItem.sectionTitle}
-                                        sectionSubtitle={projectItem.sectionSubtitle}
-                                        paragraph={projectItem.paragraph}
-                                        selectedTags={this.state.selectedTags}
-                                    />
-                                </Col>
-                            )
+                            const intersection = _.intersection(this.state.selectedTags, projectItem.tags);
+
+                            let isVisible = false;
+
+                            if (intersection.length > 0 || this.state.selectedTags.length === 0) {
+                                isVisible = true;
+                            }
+
+                            if (isVisible) {
+                                return (
+                                    <Col
+                                        xs={12} sm={6} md={4} lg={4}
+                                        key={projectItem.id}
+                                        onClick={this.itemClicked}
+                                        id={projectItem.id}
+                                    >
+                                        <ProjectPreview
+                                            title={projectItem.title}
+                                            subtitle={projectItem.subtitle}
+                                            imageUrl={projectItem.imageUrl}
+                                            role={projectItem.role}
+                                            ProjectDescription={projectItem.projectDescription}
+                                            projectTags={projectItem.tags}
+                                            sectionTitle={projectItem.sectionTitle}
+                                            sectionSubtitle={projectItem.sectionSubtitle}
+                                            paragraph={projectItem.paragraph}
+                                            selectedTags={this.state.selectedTags}
+                                        />
+                                    </Col>
+                                )
+                            } else {
+                                return null;
+                            }
                         })
                     }
                 </Row>
