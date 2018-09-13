@@ -122,7 +122,7 @@ export default class ProjectList extends React.Component {
                         setSelectedTags={this.setSelectedTags}
                         closeFilter={this.closeFilter}
                     />
-                    <Col xs={12} sm={6} md={4}>
+                    <Col xs={12} sm={6} md={4} lg={4}>
                         {
                             this.showFilterCard()
                         }
@@ -131,7 +131,7 @@ export default class ProjectList extends React.Component {
                         tempProjectData.map((projectItem) => {
                             return (
                                 <Col
-                                    xs={12} sm={6} md={4}
+                                    xs={12} sm={6} md={4} lg={4}
                                     key={projectItem.id}
                                     onClick={this.itemClicked}
                                     id={projectItem.id}
