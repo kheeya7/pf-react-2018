@@ -1,7 +1,8 @@
 import React from 'react'
+import { Grid } from 'react-bootstrap'
 import ProjectList from '../components/project-list'
 import { WorkExperience } from '../components/work-experience'
-import { Grid } from 'react-bootstrap'
+import { BlogPosts } from '../components/blog-posts'
 
 export default class MainView extends React.Component {
     constructor(props) {
@@ -13,6 +14,7 @@ export default class MainView extends React.Component {
                 <Grid>
                     <WorkExperience />
                     <ProjectList />
+                    <BlogPosts />
                 </Grid>
             </div>
         )
