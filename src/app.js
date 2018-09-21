@@ -26,17 +26,20 @@ class App extends React.Component {
     if (this.state.selectedProjectId) {
       return (
         <div>
-          <HeaderView />
+          <HeaderView
+            mode="minimized"
+            selectProjectById={this.selectProjectById}
+          />
           <PostingDetail
             selectedProjectId={this.state.selectedProjectId}
-            selectProjectById={this.selectProjectById} />
+          />
           <FooterView />
         </div>
       )
     } else {
       return (
         <div className='portfolio-top-container'>
-          <HeaderView />
+          <HeaderView mode="full" />
           <MainView selectProjectById={this.selectProjectById} />
           <ContactMeSection />
           <FooterView />

@@ -17,6 +17,6 @@ Paragraph.propTypes = {
     text: PropTypes.string,
 }
 
-Paragraph.propTypes = {
+Paragraph.defaultProps = {
     text: '',
 }

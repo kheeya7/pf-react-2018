@@ -1,17 +1,11 @@
 import React from 'react'
 import { Button } from 'react-bootstrap'
 import ProjectYuri from './project-yuri'
-import Unify from './unify/unify'
+import Unify from './unify'
 
 export default class PostingDetail extends React.Component {
     constructor(props) {
         super(props)
-
-        this.buttonClicked = this.buttonClicked.bind(this)
-    }
-
-    buttonClicked() {
-        this.props.selectProjectById(null)
     }
 
     render() {
@@ -27,12 +21,6 @@ export default class PostingDetail extends React.Component {
 
         return (
             <div>
-                <div>
-                    Selected Project Id={this.props.selectedProjectId}
-                </div>
-                <Button onClick={this.buttonClicked}>
-                    Go back
-                </Button>
                 {componentToRender()}
             </div>
         )

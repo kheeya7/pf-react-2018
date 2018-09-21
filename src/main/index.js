@@ -13,7 +13,9 @@ export default class MainView extends React.Component {
             <div>
                 <Grid>
                     <WorkExperience />
-                    <ProjectList />
+                    <ProjectList
+                        selectProjectById={this.props.selectProjectById}
+                    />
                     <BlogPosts />
                 </Grid>
             </div>

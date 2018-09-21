@@ -3,7 +3,7 @@ import { Grid, Row, Col, Image } from 'react-bootstrap'
 import {
     Title,
     ProjectDescription,
-    Separator,
+    AccentSeparator,
     SectionTitle,
     SectionSubtitle,
     Paragraph
@@ -16,7 +16,7 @@ export default class Unify extends React.Component {
         return (
             <Grid>
                 <Title text="Unify" />
-                <Separator />
+                <AccentSeparator />
                 <ProjectDescription text="Interests-sharing network for everyone" />
                 <ProjectDescription text="who wants to make feminist innovation and technology" />
                 <UnifyHeaderImage />

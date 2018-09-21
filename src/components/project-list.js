@@ -42,7 +42,7 @@ export default class ProjectList extends React.Component {
     itemClicked(e) {
         console.log(e.currentTarget.id)
 
-        //this.props.selectProjectById(e.currentTarget.id)
+        this.props.selectProjectById(e.currentTarget.id)
     }
 
     getNumberOfFilteredProjects() {
@@ -88,7 +88,7 @@ export default class ProjectList extends React.Component {
                 <div style={{ fontSize: '1.5em', fontWeight: 'bold', marginBottom: '1em', padding: '0 10px' }}>
                     ABOUT PROJECTS
             </div>
-                <div style={{ fontSize: '1.2em', marginBottom: '100px', lineHeight: '2em', padding: '0 10px' }}>
+                <div style={{ fontSize: '1.3em', marginBottom: '100px', lineHeight: '2em', padding: '0 10px' }}>
                     These are my projects over past few years. You can filter them out by skills and techniques I used in projects.
             </div>
                 <Button

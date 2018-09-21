@@ -19,6 +19,6 @@ ProjectDescription.propTypes = {
     text: PropTypes.string,
 }
 
-ProjectDescription.propTypes = {
+ProjectDescription.defaultProps = {
     text: '',
 }
